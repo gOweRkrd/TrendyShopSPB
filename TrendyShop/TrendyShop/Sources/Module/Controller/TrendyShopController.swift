@@ -7,16 +7,24 @@
 
 import UIKit
 
-class TrendyShopController: UIViewController {
+final class TrendyShopController: UIViewController {
+    
+    // MARK: - Properties
+
+    private let trendyView = TrendyView()
+    
+    // MARK: - Lifecycle
+    
+    override func loadView() {
+        super.loadView()
+        self.view = trendyView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupNavigationItem()
     }
-    
-    
-    
+
     private func setupNavigationItem() {
         createCustomNavigationBar()
         

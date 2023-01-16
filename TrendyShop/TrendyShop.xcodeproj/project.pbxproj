@@ -13,6 +13,9 @@
 		5070BD4B29756AD100927221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070BD4A29756AD100927221 /* Assets.xcassets */; };
 		5070BD4E29756AD100927221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5070BD4C29756AD100927221 /* LaunchScreen.storyboard */; };
 		5070BD56297571DD00927221 /* Extension+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD55297571DD00927221 /* Extension+NavigationBar.swift */; };
+		5070BD6029758F4E00927221 /* TrendyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD5F29758F4E00927221 /* TrendyView.swift */; };
+		5070BD622975904100927221 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD612975904100927221 /* UIView+AddSubviews.swift */; };
+		5070BD64297590C200927221 /* Int+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD63297590C200927221 /* Int+Scaling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		5070BD4D29756AD100927221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5070BD4F29756AD100927221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5070BD55297571DD00927221 /* Extension+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NavigationBar.swift"; sourceTree = "<group>"; };
+		5070BD5F29758F4E00927221 /* TrendyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyView.swift; sourceTree = "<group>"; };
+		5070BD612975904100927221 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
+		5070BD63297590C200927221 /* Int+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Scaling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,82 @@
 		5070BD4029756AD000927221 /* TrendyShop */ = {
 			isa = PBXGroup;
 			children = (
-				5070BD4129756AD000927221 /* AppDelegate.swift */,
-				5070BD4329756AD000927221 /* SceneDelegate.swift */,
-				5070BD4529756AD000927221 /* TrendyShopController.swift */,
-				5070BD55297571DD00927221 /* Extension+NavigationBar.swift */,
-				5070BD4A29756AD100927221 /* Assets.xcassets */,
-				5070BD4C29756AD100927221 /* LaunchScreen.storyboard */,
+				5070BD5729758E6500927221 /* Sources */,
+				5070BD5D29758F0000927221 /* Resources */,
 				5070BD4F29756AD100927221 /* Info.plist */,
 			);
 			path = TrendyShop;
+			sourceTree = "<group>";
+		};
+		5070BD5729758E6500927221 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD5829758E7A00927221 /* Module */,
+				5070BD5B29758EBC00927221 /* Supporting */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5070BD5829758E7A00927221 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD5929758E8600927221 /* View */,
+				5070BD5A29758E9B00927221 /* Controller */,
+				5070BD5E29758F1B00927221 /* Extension */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5070BD5929758E8600927221 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD5F29758F4E00927221 /* TrendyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5070BD5A29758E9B00927221 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD4529756AD000927221 /* TrendyShopController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5070BD5B29758EBC00927221 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD5C29758EC200927221 /* Apllication */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		5070BD5C29758EC200927221 /* Apllication */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD4129756AD000927221 /* AppDelegate.swift */,
+				5070BD4329756AD000927221 /* SceneDelegate.swift */,
+			);
+			path = Apllication;
+			sourceTree = "<group>";
+		};
+		5070BD5D29758F0000927221 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD4C29756AD100927221 /* LaunchScreen.storyboard */,
+				5070BD4A29756AD100927221 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5070BD5E29758F1B00927221 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD55297571DD00927221 /* Extension+NavigationBar.swift */,
+				5070BD612975904100927221 /* UIView+AddSubviews.swift */,
+				5070BD63297590C200927221 /* Int+Scaling.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5070BD4629756AD000927221 /* TrendyShopController.swift in Sources */,
+				5070BD64297590C200927221 /* Int+Scaling.swift in Sources */,
+				5070BD6029758F4E00927221 /* TrendyView.swift in Sources */,
+				5070BD622975904100927221 /* UIView+AddSubviews.swift in Sources */,
 				5070BD56297571DD00927221 /* Extension+NavigationBar.swift in Sources */,
 				5070BD4229756AD000927221 /* AppDelegate.swift in Sources */,
 				5070BD4429756AD000927221 /* SceneDelegate.swift in Sources */,
