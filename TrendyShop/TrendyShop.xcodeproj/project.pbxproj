@@ -81,7 +81,6 @@
 			children = (
 				5070BD5729758E6500927221 /* Sources */,
 				5070BD5D29758F0000927221 /* Resources */,
-				5070BD4F29756AD100927221 /* Info.plist */,
 			);
 			path = TrendyShop;
 			sourceTree = "<group>";
@@ -98,6 +97,7 @@
 		5070BD5829758E7A00927221 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				504FF4C02976BEE600813D3E /* Model */,
 				5070BD5929758E8600927221 /* View */,
 				5070BD5A29758E9B00927221 /* Controller */,
 				5070BD5E29758F1B00927221 /* Extension */,
@@ -108,7 +108,6 @@
 		5070BD5929758E8600927221 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				504FF4C02976BEE600813D3E /* Model */,
 				5070BD652976BCA800927221 /* Cell */,
 				5070BD5F29758F4E00927221 /* TrendyView.swift */,
 			);
@@ -145,6 +144,7 @@
 			children = (
 				5070BD4C29756AD100927221 /* LaunchScreen.storyboard */,
 				5070BD4A29756AD100927221 /* Assets.xcassets */,
+				5070BD4F29756AD100927221 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrendyShop/Info.plist;
+				INFOPLIST_FILE = TrendyShop/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -414,7 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrendyShop/Info.plist;
+				INFOPLIST_FILE = TrendyShop/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

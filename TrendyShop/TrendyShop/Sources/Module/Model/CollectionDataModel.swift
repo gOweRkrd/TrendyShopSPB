@@ -13,5 +13,5 @@ struct CustomDataFirst {
 
 let dataFirstCV: [CustomDataFirst] = [
     CustomDataFirst(image: #imageLiteral(resourceName: "Image1")),
-    CustomDataFirst(image: #imageLiteral(resourceName: "Image2")),
+    CustomDataFirst(image: #imageLiteral(resourceName: "Image2"))
 ]

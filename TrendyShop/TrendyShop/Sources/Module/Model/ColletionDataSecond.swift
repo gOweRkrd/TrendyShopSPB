@@ -12,6 +12,6 @@ struct CustomDataSecond {
 }
 
 let dataSecondCV: [CustomDataSecond] = [
-    CustomDataSecond(image: #imageLiteral(resourceName: "Image2")),
-    CustomDataSecond(image: #imageLiteral(resourceName: "Image4")),
+    CustomDataSecond(image: #imageLiteral(resourceName: "Image3")),
+    CustomDataSecond(image: #imageLiteral(resourceName: "Image4"))
 ]
