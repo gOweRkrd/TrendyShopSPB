@@ -111,11 +111,13 @@ final class TrendyView: UIView {
         return label
     }()
     
-     lazy var scrollView: UIScrollView = {
-       let sv = UIScrollView()
-       return sv
-     }()
-    
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .white
+        scrollView.frame = self.bounds
+        scrollView.contentSize = contentSize
+        return scrollView
+    }()
     
      lazy var contentView: UIView = {
       let view = UIView()
@@ -131,13 +133,16 @@ final class TrendyView: UIView {
         return label
     }()
     
+    private var contentSize: CGSize {
+        CGSize(width: self.frame.width, height: self.frame.height + 400)
+    }
+    
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        self.addSubview(scrollView)
-//        scrollView.addSubview(imageViewMain)
         backgroundColor = .white
         
         addSybView()
@@ -154,7 +159,8 @@ final class TrendyView: UIView {
 extension TrendyView {
     
     func addSybView() {
-        addSubviews([
+        self.addSubview(scrollView)
+        scrollView.addSubviews([
             imageViewMain,
             descriptionLabel,
             pricelabel,
@@ -171,28 +177,14 @@ extension TrendyView {
         ])
     }
     
-    //    func configureUI() {
-    //        self.addSubview(scrollView)
-    //        NSLayoutConstraint.activate([
-    //            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-    //            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-    //            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-    //            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-    //        ])
-    //
-    //        scrollView.addSubview(contentView)
-    //        NSLayoutConstraint.activate([
-    //            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-    //            contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
-    //            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
-    //            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-    //            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-    //        ])
-    //
-    //    }
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            
             imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -200,50 +192,46 @@ extension TrendyView {
             
             descriptionLabel.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: .descriptionLabelTopAnchor),
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .leadingTrailingAnchor),
-            
+
             pricelabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: .pricelabelTopAnchor),
             pricelabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .leadingTrailingAnchor),
-            
+
             imageFavourites.topAnchor.constraint(equalTo: imageViewMain.bottomAnchor, constant: .descriptionLabelTopAnchor),
             imageFavourites.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.leadingTrailingAnchor),
-            
+
             sizelabel.topAnchor.constraint(equalTo: pricelabel.bottomAnchor, constant: .sizelabelTopAnchor),
             sizelabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .sizelabelLeadingAnchor),
-            
+
             pickUpSizelabel.topAnchor.constraint(equalTo: pricelabel.bottomAnchor, constant: .sizelabelTopAnchor),
             pickUpSizelabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.leadingTrailingAnchor),
-            
+
             imageLine.topAnchor.constraint(equalTo: pickUpSizelabel.bottomAnchor, constant: .imageLineTopAnchor),
             imageLine.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -.imageLineTrailingAnchor),
-            
+
             imageXS.topAnchor.constraint(equalTo: sizelabel.bottomAnchor, constant: .imageXSTopAnchor),
             imageXS.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .imageXSLeadingAnchor),
             imageXS.widthAnchor.constraint(equalToConstant: 73),
             imageXS.heightAnchor.constraint(equalToConstant: 40),
-            
+
             imageS.topAnchor.constraint(equalTo: imageXS.topAnchor),
             imageS.leadingAnchor.constraint(equalTo: imageXS.trailingAnchor, constant: .imageSLeadingAnchor),
             imageS.widthAnchor.constraint(equalToConstant: 73),
             imageS.heightAnchor.constraint(equalToConstant: 40),
-            
+
             imageM.topAnchor.constraint(equalTo: imageS.topAnchor,constant: -.imageMTopAnchor),
             imageM.leadingAnchor.constraint(equalTo: imageS.trailingAnchor, constant: .imageSLeadingAnchor),
             imageM.widthAnchor.constraint(equalToConstant: 73),
             imageM.heightAnchor.constraint(equalToConstant: 42),
-            
+
             miniSizelabel.topAnchor.constraint(equalTo: imageXS.bottomAnchor, constant: .miniSizelabelTopAnchor),
             miniSizelabel.centerXAnchor.constraint(equalTo: imageXS.centerXAnchor),
-            
+
             subscriptionlabel.topAnchor.constraint(equalTo: imageM.bottomAnchor, constant: .miniSizelabelTopAnchor),
             subscriptionlabel.centerXAnchor.constraint(equalTo: imageM.centerXAnchor),
-            
+
             colorlabel.topAnchor.constraint(equalTo: miniSizelabel.bottomAnchor, constant: .colorlabelTopAnchor),
             colorlabel.leadingAnchor.constraint(equalTo: sizelabel.leadingAnchor),
             
-//            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-//            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-//            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }
