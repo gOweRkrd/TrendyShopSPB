@@ -111,19 +111,6 @@ final class TrendyView: UIView {
         return label
     }()
     
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.backgroundColor = .white
-        scrollView.frame = self.bounds
-        scrollView.contentSize = contentSize
-        return scrollView
-    }()
-    
-     lazy var contentView: UIView = {
-      let view = UIView()
-      return view
-    }()
-    
     lazy var colorlabel: UILabel = {
         
         let label = UILabel()
@@ -132,6 +119,51 @@ final class TrendyView: UIView {
         label.textColor = .black
         return label
     }()
+    
+    lazy var allColorlabel: UILabel = {
+        
+        let label = UILabel()
+        label.text = "Все цвета"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = .black
+        return label
+    }()
+    
+    lazy var imageLine2: UIImageView = {
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Line2")
+        return imageView
+    }()
+    
+    lazy var whiteColorButton: UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "WhiteColor"), for: .normal)
+        return button
+    }()
+    
+    lazy var blackColorButton: UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "BlackColor"), for: .normal)
+        return button
+    }()
+    
+    lazy var beigeColorButton: UIButton = {
+        
+        let button = UIButton()
+        button.setImage(UIImage(named: "BeigeColor"), for: .normal)
+        return button
+    }()
+    
+    lazy var imageLine3: UIImageView = {
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Line3")
+        return imageView
+    }()
+    
     
     private var contentSize: CGSize {
         CGSize(width: self.frame.width, height: self.frame.height + 400)
@@ -159,8 +191,8 @@ final class TrendyView: UIView {
 extension TrendyView {
     
     func addSybView() {
-        self.addSubview(scrollView)
-        scrollView.addSubviews([
+        
+        addSubviews([
             imageViewMain,
             descriptionLabel,
             pricelabel,
@@ -174,17 +206,19 @@ extension TrendyView {
             miniSizelabel,
             subscriptionlabel,
             colorlabel,
+            allColorlabel,
+            imageLine2,
+            whiteColorButton,
+            blackColorButton,
+            beigeColorButton,
+            imageLine3
         ])
     }
     
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            
+       
             imageViewMain.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             imageViewMain.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             imageViewMain.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -232,6 +266,30 @@ extension TrendyView {
             colorlabel.topAnchor.constraint(equalTo: miniSizelabel.bottomAnchor, constant: .colorlabelTopAnchor),
             colorlabel.leadingAnchor.constraint(equalTo: sizelabel.leadingAnchor),
             
+            allColorlabel.topAnchor.constraint(equalTo: colorlabel.topAnchor),
+            allColorlabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -.leadingTrailingAnchor),
+            
+            imageLine2.topAnchor.constraint(equalTo: allColorlabel.bottomAnchor, constant: .imageLineTopAnchor),
+            imageLine2.centerXAnchor.constraint(equalTo: allColorlabel.centerXAnchor),
+            
+            whiteColorButton.topAnchor.constraint(equalTo: colorlabel.bottomAnchor, constant: .whiteColorButtonTopAnchor),
+            whiteColorButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: .imageLineTrailingAnchor),
+            whiteColorButton.widthAnchor.constraint(equalToConstant: 28),
+            whiteColorButton.heightAnchor.constraint(equalToConstant: 27),
+            
+            blackColorButton.topAnchor.constraint(equalTo: colorlabel.bottomAnchor, constant: .whiteColorButtonTopAnchor),
+            blackColorButton.leadingAnchor.constraint(equalTo: whiteColorButton.trailingAnchor, constant: .blackColorButtonLeadingAnchor),
+            blackColorButton.widthAnchor.constraint(equalToConstant: 28),
+            blackColorButton.heightAnchor.constraint(equalToConstant: 27),
+            
+            beigeColorButton.topAnchor.constraint(equalTo: colorlabel.bottomAnchor, constant: .whiteColorButtonTopAnchor),
+            beigeColorButton.leadingAnchor.constraint(equalTo: blackColorButton.trailingAnchor, constant: .blackColorButtonLeadingAnchor),
+            beigeColorButton.widthAnchor.constraint(equalToConstant: 28),
+            beigeColorButton.heightAnchor.constraint(equalToConstant: 27),
+            
+            imageLine3.topAnchor.constraint(equalTo: whiteColorButton.bottomAnchor, constant: .imageLineTopAnchor),
+            imageLine3.centerXAnchor.constraint(equalTo: whiteColorButton.centerXAnchor),
+            
         ])
     }
 }
@@ -253,5 +311,7 @@ private extension CGFloat {
     static let imageMTopAnchor: CGFloat = 2
     static let miniSizelabelTopAnchor: CGFloat = 3
     static let colorlabelTopAnchor: CGFloat = 40
+    static let whiteColorButtonTopAnchor: CGFloat = 6
+    static let blackColorButtonLeadingAnchor: CGFloat = 16
     
 }
