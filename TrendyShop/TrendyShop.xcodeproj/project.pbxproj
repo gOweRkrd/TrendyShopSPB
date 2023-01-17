@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504FF4C22976BF1300813D3E /* CollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504FF4C12976BF1300813D3E /* CollectionDataModel.swift */; };
+		504FF4C42976BF7800813D3E /* ColletionDataSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504FF4C32976BF7800813D3E /* ColletionDataSecond.swift */; };
+		504FF4C62976C06900813D3E /* ColletionCellSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504FF4C52976C06900813D3E /* ColletionCellSecond.swift */; };
 		5070BD4229756AD000927221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD4129756AD000927221 /* AppDelegate.swift */; };
 		5070BD4429756AD000927221 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD4329756AD000927221 /* SceneDelegate.swift */; };
 		5070BD4629756AD000927221 /* TrendyShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD4529756AD000927221 /* TrendyShopController.swift */; };
@@ -16,9 +19,13 @@
 		5070BD6029758F4E00927221 /* TrendyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD5F29758F4E00927221 /* TrendyView.swift */; };
 		5070BD622975904100927221 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD612975904100927221 /* UIView+AddSubviews.swift */; };
 		5070BD64297590C200927221 /* Int+Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD63297590C200927221 /* Int+Scaling.swift */; };
+		5070BD672976BCE900927221 /* CollectionCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070BD662976BCE900927221 /* CollectionCellFirst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		504FF4C12976BF1300813D3E /* CollectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataModel.swift; sourceTree = "<group>"; };
+		504FF4C32976BF7800813D3E /* ColletionDataSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionDataSecond.swift; sourceTree = "<group>"; };
+		504FF4C52976C06900813D3E /* ColletionCellSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColletionCellSecond.swift; sourceTree = "<group>"; };
 		5070BD3E29756AD000927221 /* TrendyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070BD4129756AD000927221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5070BD4329756AD000927221 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +37,7 @@
 		5070BD5F29758F4E00927221 /* TrendyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyView.swift; sourceTree = "<group>"; };
 		5070BD612975904100927221 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		5070BD63297590C200927221 /* Int+Scaling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Scaling.swift"; sourceTree = "<group>"; };
+		5070BD662976BCE900927221 /* CollectionCellFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellFirst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504FF4C02976BEE600813D3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				504FF4C12976BF1300813D3E /* CollectionDataModel.swift */,
+				504FF4C32976BF7800813D3E /* ColletionDataSecond.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5070BD3529756AD000927221 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +108,8 @@
 		5070BD5929758E8600927221 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				504FF4C02976BEE600813D3E /* Model */,
+				5070BD652976BCA800927221 /* Cell */,
 				5070BD5F29758F4E00927221 /* TrendyView.swift */,
 			);
 			path = View;
@@ -138,6 +157,15 @@
 				5070BD63297590C200927221 /* Int+Scaling.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		5070BD652976BCA800927221 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5070BD662976BCE900927221 /* CollectionCellFirst.swift */,
+				504FF4C52976C06900813D3E /* ColletionCellSecond.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,12 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504FF4C22976BF1300813D3E /* CollectionDataModel.swift in Sources */,
+				5070BD672976BCE900927221 /* CollectionCellFirst.swift in Sources */,
 				5070BD4629756AD000927221 /* TrendyShopController.swift in Sources */,
 				5070BD64297590C200927221 /* Int+Scaling.swift in Sources */,
 				5070BD6029758F4E00927221 /* TrendyView.swift in Sources */,
+				504FF4C42976BF7800813D3E /* ColletionDataSecond.swift in Sources */,
 				5070BD622975904100927221 /* UIView+AddSubviews.swift in Sources */,
 				5070BD56297571DD00927221 /* Extension+NavigationBar.swift in Sources */,
 				5070BD4229756AD000927221 /* AppDelegate.swift in Sources */,
+				504FF4C62976C06900813D3E /* ColletionCellSecond.swift in Sources */,
 				5070BD4429756AD000927221 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
