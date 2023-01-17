@@ -4,7 +4,7 @@
 
 Meaning project :one of the screens of an online clothing store,made by design from figma.
 
-Version iOS: 14+
+Version iOS: 14.1+
 
 Stack: UIKit,CustomNavigationBar,UIScrollView,MVC
 
