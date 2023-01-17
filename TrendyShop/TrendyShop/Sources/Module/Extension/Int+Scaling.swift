@@ -13,7 +13,7 @@ extension Int {
     private var screenSize: CGSize { UIScreen.main.bounds.size }
     
     var halfScreen: CGFloat {
-        return CGFloat(screenSize.height / 1.5)
+        return CGFloat(screenSize.height / 1.6)
     }
     
     /// Сделать пропорционально ширине экрана iPhoneX, только если ширина текущего устройства больше ширины iPhoneX.
