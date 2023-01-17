@@ -212,6 +212,17 @@ final class TrendyView: UIView {
         return button
     }()
     
+    lazy var nameClotheslabel: UILabel = {
+        
+        let label = UILabel()
+        label.text = "ПЛАТЬЯ C V-ОБРАЗНЫМ \n ВЫРЕЗОМ,БЕЛЫЙ"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = .black
+        label.numberOfLines = 2
+        label.textAlignment = .left
+        return label
+    }()
+    
 //    let collectionViewFirst: UICollectionView = {
 //        
 //        let layout = UICollectionViewFlowLayout()
@@ -286,6 +297,7 @@ extension TrendyView {
             rightButton,
 //            collectionViewFirst,
 //            collectionViewSecond
+            nameClotheslabel
         ])
     }
     
@@ -394,6 +406,8 @@ extension TrendyView {
 //            collectionViewSecond.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
 //            collectionViewSecond.heightAnchor.constraint(equalToConstant: 200),
             
+            nameClotheslabel.topAnchor.constraint(equalTo: similarProductsButton.topAnchor,constant: .nameClotheslabelTopAnchor),
+            nameClotheslabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: .nameClotheslabelLeadingAnchor),
         ])
     }
 }
@@ -424,5 +438,7 @@ private extension CGFloat {
     static let similarProductsButtonTopAnchor: CGFloat = 55
     static let leftButtonButtonTrailingAnchor: CGFloat = -30
     static let rightButtonTrailingAnchor: CGFloat = 21
+    static let nameClotheslabelLeadingAnchor: CGFloat = 12
+    static let nameClotheslabelTopAnchor: CGFloat = 50
     
 }
