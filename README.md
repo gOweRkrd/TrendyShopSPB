@@ -1,1 +1,1 @@
-# TrandShop
+# TrendyShop
