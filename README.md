@@ -8,4 +8,9 @@ Version iOS: 14.1+
 
 Stack: UIKit,CustomNavigationBar,UIScrollView,MVC
 
+### Demonstration of the operation of screens and the operation of the application:
+
+<img width="334" src="https://user-images.githubusercontent.com/110721351/213438261-1feaee13-8d55-445f-90bc-dd5497f69f7c.gif">
+
+
 
